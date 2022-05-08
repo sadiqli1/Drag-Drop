@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container .row{
+    width: 25%;
+    height: 100vh;
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.container .row .header{
+    text-align: center;
+}
+
+.container .row .header h1{
+    font-size: 40px;
+}
+
+.task-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-container .task{
+    width: 90%;
+    margin-top: 10px;
+    cursor: move;
+    border-radius: 20px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-container .task i{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input{
+    width: auto;
+    padding: 20px 95px;
+}
+
+.input input{
+    padding: 5px 30px;
+    border-radius: 20px;
+    border-color: #e3e3e3;
+}
+
+.input button{
+    padding: 5px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+}
+
+.drag-item{
+    opacity: 0.5;
+}
+
+.drag{
+    animation: 1s myanimation linear;
+}
+
+@keyframes myanimation{
+    0%{
+        width: 20%;
+        /* transform: rotate(0deg); */
+        transform: scale(0.2);
+    }
+    25%{
+        width: 20%;
+        /* transform: rotate(90deg); */
+        transform: scale(0.4);
+    }
+    50%{
+        width: 20%;
+        /* transform: rotate(180deg); */
+        transform: scale(0.6);
+    }
+    75%{
+        width: 20%;
+        /* transform: rotate(270deg); */
+        transform: scale(0.8);
+    }
+    100%{
+        width: 20%;
+        /* transform: rotate(360deg); */
+        transform: scale(1);
+    }
+}
+
+.to-do > div{
+    background-color: red;
+    color: white;
+    box-shadow: 0 4px 10px red;
+}
+
+.doing > div{
+    background-color: royalblue;
+    color: white;
+    box-shadow: 0 4px 10px royalblue;
+}
+
+.done > div{
+    background-color: greenyellow;
+    color: white;
+    box-shadow: 0 4px 10px greenyellow;
+}
